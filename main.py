@@ -63,10 +63,6 @@ class MainWindow(tk.Tk):
 
     def save_file(self):
         if self.image is not None:
-            # ImageDraw.text(xy, text, fill=None, font=None, anchor=None, spacing=4, align='left', direction=None,
-            #                features=None, language=None, stroke_width=0, stroke_fill=None, embedded_color=False)
-            # self.watermark_text_object.
-            #
             font = ImageFont.truetype(font="arial.ttf", size=self.font_size)
             draw = ImageDraw.Draw(self.image)
             draw.text(tuple(self.canvas.coords(self.watermark_text_object)), text=self.watermark_text, font=font, fill=self.text_color)
